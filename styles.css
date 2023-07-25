@@ -103,8 +103,7 @@
     }
     .place-text{
         color:black;
-    }
-    
+    } 
 }
 .place-icon{
     color:gray;
@@ -113,38 +112,35 @@
     color:gray;
     font-size: 0.95rem;
 }
-
-
   .toggle-input-field {
+    left: 25%;
+    margin-right:2em;
     align-items: center;
     position: relative;
-    max-width:50%;
+    max-width:45%;
+
   }
 
-  /* .toggle-input-field .form-control {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  } */
-
-  .toggle-input-field .btn {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 2;
-
+  .form-control{
+    height: 4em;
+    border-radius: 0.75em !important;
+  }
+  .form-control:focus {
+    box-shadow: none !important;
+    border-color: #dee2e6 !important;
   }
 
   /* Custom CSS for switch-like appearance */
 .switch {
     position: absolute;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 3.25em;
+    height: 2em;
     right: 0;
-    top: 0;
+    top: 1em;
     bottom: 0;
     z-index: 2;
+    margin-right: 0.5em;
   }
   
   .switch input {
@@ -161,16 +157,16 @@
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
-    border-radius: 34px;
+    border-radius: 4em;
   }
   
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: 1.75em;
+    width: 1.75em;
+    left: 0.05em;
+    bottom: 0.15em;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
@@ -186,9 +182,9 @@
   }
   
   input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(1.25em);
+    -ms-transform: translateX(1.25em);
+    transform: translateX(1.25em);
   }
   
 
