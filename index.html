@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -28,6 +29,7 @@
       </nav> 
       <!-- navbar finished -->
 
+      <!-- search list and filter button -->
       <div class="sticky search-and-filter"> 
         <div class="place-list">
             <a href="#" class="a-link active-place">
@@ -87,6 +89,33 @@
         </div>       
         <button type="button" class="btn filter-btn"><i class="bi bi-filter list-space"></i>Filters</button>
       </div>
+      <!-- search list and filter button finished -->
+
+      <!-- toggle input field -->
+      <!-- <div class="toggle-input-field">
+        <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+
+      </div> -->
+      <div class="toggle-input-field">
+        <input type="text" class="form-control" placeholder="Display total price | Includes all fees, before taxes" aria-label="Username" aria-describedby="toggle-button" readonly>
+        <!-- <button class="btn" type="button" id="toggle-button">Toggle</button> -->
+        <div class="container mt-4">
+            <label class="switch">
+              <input type="checkbox" id="toggleButton" data-toggle="toggle">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        
+      </div>
+
+      
+      <!-- <script>
+        $(document).ready(function() {
+          $('#toggleButton').bootstrapToggle();
+        });
+      </script> -->
+      
+      <!-- toggle input field finished -->
 
     <!-- Content -->
     <div class="container mt-4">
@@ -104,6 +133,7 @@
 
     <!-- Link Bootstrap JS -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 </body>
 </html>
 
