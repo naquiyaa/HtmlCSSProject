@@ -48,14 +48,71 @@
 }
 .search-and-filter{
     display: flex;
-    flex-direction: column;
-    margin-top: 2em;
-    justify-content: space-between;
+    /* margin-top: 2em; */
+    justify-content: space-between; 
+    align-items: center;
+    margin: 2em;
+}
+.place-list{
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 90%;
+    -ms-overflow-style: none; /*hide scrollbar in edge and ie */
+    scrollbar-width: none; /*hide scrollbar in firefox */
+
+}
+.place-list::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome, Safari, and Opera */
 }
 .filter-btn{
     border-radius: 0.5em !important;
     border: 1px solid lightgray !important;
     height: 3em !important;
 }
+.filter-btn:hover{
+    background-color: transparent !important;
+    
+}
+.a-link{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.active-place{
+    border-bottom: 2px solid black;
+    margin-right: 5em;
+}
+.active-place-text{
+    color:black;
+    font-size: 0.95rem;
+}
+.active-place-icon{
+    color:black;
+}
+.place-item{
+    margin-right: 5em;
+}
+.place-item:hover{
+    border-bottom:2px solid lightgray;
+    .place-icon{
+        color:black;
+    }
+    .place-text{
+        color:black;
+    }
+    
+}
+.place-icon{
+    color:gray;
+}
+.place-text{
+    color:gray;
+    font-size: 0.95rem;
+}
+
 
 
