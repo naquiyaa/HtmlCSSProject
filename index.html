@@ -4,15 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Bootstrap Project</title>
+    <title>Airbnb Mimic</title>
     <!-- Link Bootstrap CSS -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">My Website</a>
-    </nav>
+    <!-- Navbar(the middle element is left) -->
+    <nav class="navbar sticky-top navbar-styling">
+        <a class="navbar-brand" href="#">
+          <img class="logo" src="img/airbnb_logo.png" alt="logo">
+        </a>
+        <div>Searchbox</div>
+        
+        <div class="navbar-right-elements">
+            <button type="button" class="btn airbnb-home-btn">Airbnb your home</button>
+            <button type="button" class="btn language-btn"><i class="bi bi-globe"></i></button>
+            <button type="button" class="btn profile-btn"><i class="bi bi-list list-space"></i><i class="bi bi-person-circle"></i></button>
+                   
+        </div>
+      </nav> 
+      <!-- navbar finished -->
+
+      <div class="sticky search-and-filter"> 
+        <div class="place-list">
+            <div>
+                
+            </div>
+
+        </div>       
+        <button type="button" class="btn filter-btn"><i class="bi bi-filter list-space"></i>Filters</button>
+      </div>
 
     <!-- Content -->
     <div class="container mt-4">
@@ -24,6 +48,7 @@
         <button type="button" class="btn btn-light">Light</button>
         <button type="button" class="btn btn-secondary">Secondary</button>
         <button type="button" class="btn btn-outline-danger">Danger</button>
+        <i class="bi bi-heart"></i>
     </div>
     <!-- Your website content goes here -->
 
