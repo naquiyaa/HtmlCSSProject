@@ -13,7 +13,6 @@
 
 .navbar-styling{
     border-bottom: 1px solid lightgray;
-    background-color:white;
 }
 
 .navbar-right-elements{
@@ -48,21 +47,13 @@
     margin-right: 0.5em;
 }
 .search-and-filter{
-
     display: flex;
     /* margin-top: 2em; */
     justify-content: space-between; 
-    background-color:white;
     align-items: center;
-    margin-left: 2em;
-    margin-bottom: 2em;
-    margin-right: 2em;
-    position:sticky;
-    top: 4.75em;
-    z-index:99;
+    margin: 2em;
 }
 .place-list{
-    margin-top: 1em;
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
@@ -75,7 +66,6 @@
     display: none; /* Hide scrollbar in Chrome, Safari, and Opera */
 }
 .filter-btn{
-    margin-top: 1em;
     border-radius: 0.5em !important;
     border: 1px solid lightgray !important;
     height: 3em !important;
@@ -196,14 +186,7 @@
     -ms-transform: translateX(1.25em);
     transform: translateX(1.25em);
   }
-
-  .images{
-    object-fit: cover;
-    border-radius: 1em;
-    width:100%;
-    height:100%
-  }
-
+  
 
 
 
