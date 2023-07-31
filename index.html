@@ -1,4 +1,3 @@
-<!-- specifies that doc type is html5 -->
 <!DOCTYPE html> 
 <html lang="en">
 <head>
@@ -10,23 +9,22 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-
 </head>
 <body>
-    <!-- Navbar(the middle element is left) -->
-    <nav class="navbar sticky-top navbar-styling">
-        <a class="navbar-brand" href="#">
-          <img class="logo" src="img/airbnb_logo.png" alt="logo">
-        </a>
-        <div>Searchbox</div>
+  <!-- Navbar(the middle element is left) -->
+  <nav class="navbar sticky-top navbar-styling">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="img/airbnb_logo.png" alt="logo">
+      </a>
+      <div>Searchbox</div>
         
-        <div class="navbar-right-elements">
-            <button type="button" class="btn airbnb-home-btn">Airbnb your home</button>
-            <button type="button" class="btn language-btn"><i class="bi bi-globe"></i></button>
-            <button type="button" class="btn profile-btn"><i class="bi bi-list list-space"></i><i class="bi bi-person-circle"></i></button>         
-        </div>
-      </nav> 
-      <!-- navbar finished -->
+      <div class="navbar-right-elements">
+        <button type="button" class="btn airbnb-home-btn">Airbnb your home</button>
+        <button type="button" class="btn language-btn"><i class="bi bi-globe"></i></button>
+        <button type="button" class="btn profile-btn"><i class="bi bi-list list-space"></i><i class="bi bi-person-circle"></i></button>         
+    </div>
+  </nav> 
+  <!-- navbar finished -->
 
       <!-- search list and filter button -->
       <div class="sticky search-and-filter"> 
@@ -84,39 +82,170 @@
         
       </div>
 
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-bs-target="#carousel1" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carousel1" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carousel1" data-bs-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="img/place1.PNG" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="img/place2.PNG" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="img/place3.PNG" alt="Third slide">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev"  >
+                <span><i class="bi bi-arrow-left-circle nav-arrow"></i></span>
+                <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span> -->
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span> -->
+                <span><i class="bi bi-arrow-right-circle nav-arrow"></i></span>
+              </button>
+              
+            </div> 
+            <a class="place-desc" href="#"> 
+            <div class="title-rating">
+              <p><strong>Kittila, Finland</strong></p>
+              <div class="rating">
+                <i class="bi bi-star-fill"></i>
+                <p>4.89</p>
+              </div>
+            </div>
+            <p class="desc-text">Viewed 9,046 times last week</p>
+            <p class="desc-text">5 nights . Aug 1-6</p>   
+            <p class="taxes">$786 total before taxes</p> 
+          </a>       
+            
+          </div>
+          <div class="col-sm">
+            <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="img/place2.PNG" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="img/place1.PNG" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="img/place3.PNG" alt="Third slide">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+                <span><i class="bi bi-arrow-left-circle nav-arrow"></i></span>
+               
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+                <span><i class="bi bi-arrow-right-circle nav-arrow"></i></span>
+                
+              </button>
+            </div>
+            <a class="place-desc" href="#"> 
+              <div class="title-rating">
+                <p><strong>Warsaw, Poland</strong></p>
+                <div class="rating">
+                  <i class="bi bi-star-fill"></i>
+                  <p>4.49</p>
+                </div>
+              </div>
+              <p class="desc-text">Viewed 1,026 times last week</p>
+              <p class="desc-text">4 nights . Aug 2-4</p>   
+              <p class="taxes">$456 total before taxes</p> 
+            </a>
+          </div>
+          <div class="col-sm">
+            <div id="carousel3" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="img/place3.PNG" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="img/place2.PNG" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="img/place1.PNG" alt="Third slide">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+                <span><i class="bi bi-arrow-left-circle nav-arrow"></i></span>
+                
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+                <span><i class="bi bi-arrow-right-circle nav-arrow"></i></span>
+              
+              </button>
+            </div>
+            <a class="place-desc" href="#"> 
+              <div class="title-rating">
+                <p><strong>Karachi, Pakistan</strong></p>
+                <div class="rating">
+                  <i class="bi bi-star-fill"></i>
+                  <p>4.23</p>
+                </div>
+              </div>
+              <p class="desc-text">Viewed 7,508 times last week</p>
+              <p class="desc-text">2 nights . Aug 2-4</p>   
+              <p class="taxes">$346 total before taxes</p> 
+            </a>
+          </div>
+          <div class="col-sm">
+            <div id="carousel4" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="img/place1.PNG" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="img/place2.PNG" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="img/place3.PNG" alt="Third slide">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel4" data-bs-slide="prev">
+                <span><i class="bi bi-arrow-left-circle nav-arrow"></i></span>
+                
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel4" data-bs-slide="next">
+                <span><i class="bi bi-arrow-right-circle nav-arrow"></i></span>
+                
+              </button>
+            </div>
+            <a class="place-desc" href="#"> 
+              <div class="title-rating">
+                <p><strong>Delhi, India</strong></p>
+                <div class="rating">
+                  <i class="bi bi-star-fill"></i>
+                  <p>4.88</p>
+                </div>
+              </div>
+              <p class="desc-text">Viewed 2,508 times last week</p>
+              <p class="desc-text">3 nights . Aug 2-5</p>   
+              <p class="taxes">$621 total before taxes</p> 
+            </a>
+          </div>
+        </div>
+      </div>
       
-      <!-- <script>
-        $(document).ready(function() {
-          $('#toggleButton').bootstrapToggle();
-        });
-      </script> -->
-      
-      <!-- toggle input field finished -->
-
-    <!-- Content -->
-    <div class="container mt-4">
-        <h1 class="heading">Welcome to My Website</h1>
-        <p>This is a simple example of using Bootstrap in your HTML project.</p>
-        <button class="btn btn-primary">Click me!</button>
-        <button type="button" class="btn btn-warning">Warning</button>
-        <button type="button" class="btn btn-info">Info</button>
-        <button type="button" class="btn btn-light">Light</button>
-        <button type="button" class="btn btn-secondary">Secondary</button>
-        <button type="button" class="btn btn-outline-danger">Danger</button>
-        <i class="bi bi-heart"></i>
-    </div>
-
     <nav class="navbar fixed-bottom navbar-styling">
       <div>
       <p>&copy; 2023 Airbnb, Inc </p>
-      <a class="navbar-brand" href="#">Fixed bottom</a>
+      <!-- <a class="navbar-brand" href="#">Fixed bottom</a> -->
     </div>
     </nav>
-    <!-- Your website content goes here -->
 
     <!-- Link Bootstrap JS -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>
 
