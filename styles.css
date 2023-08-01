@@ -1,6 +1,10 @@
 p{
     margin-bottom: 0 !important;
 }
+.content{
+  min-height: calc(100vh - 54px); /* 100px is the height of the sticky footer */
+  padding-bottom: 5em;
+}
 /* Navbar */
 .logo{
     object-fit:contain;
@@ -96,7 +100,6 @@ p{
 }
 .search-and-filter{
     display: flex;
-    /* margin-top: 2em; */
     justify-content: space-between; 
     background-color: white;
     align-items: center;
@@ -355,16 +358,6 @@ p{
   } 
 }
 
-/* .footer-left-elements{
-  overflow-x: auto ;
-  flex-wrap: wrap;
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
-
-}
-.footer-left-elements::-webkit-scrollbar {
-  display: none; 
-} */
 
 
   
