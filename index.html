@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airbnb Mimic</title>
-    <!-- Link Bootstrap CSS -->
+    <!-- LINK BOOTSTRAP CSS -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-  <!-- Navbar(the middle element is left) -->
+  
   <div class="content">
+    <!-- NAVBAR (THE MIDDLE ELEMENT IS LEFT) -->
   <nav class="navbar sticky-top navbar-styling">
       <a class="navbar-brand" href="#">
         <img class="logo" src="img/airbnb_logo.png" alt="logo">
@@ -25,10 +27,34 @@
         <button type="button" class="btn profile-btn"><i class="bi bi-list list-space"></i><i class="bi bi-person-circle"></i></button>         
     </div>
   </nav> 
-  <!-- navbar finished -->
+  <!-- NAVBAR FINISHED -->
 
-      <!-- search list and filter button -->
+      <!-- SEARCH LIST AND FILTER BUTTON -->
       <div class="sticky search-and-filter"> 
+        <script>
+          $(document).ready(function() {
+            // Function to toggle the 'scrolled' class when scrolling starts
+            function toggleBoxShadowOnScroll() {
+              var $searchAndFilter = $('.search-and-filter');
+              var scrollTop = $(window).scrollTop();
+              console.log(scrollTop);
+        
+              if (scrollTop > 0) {
+                $searchAndFilter.addClass('scrolled');
+              } else {
+                $searchAndFilter.removeClass('scrolled');
+              }
+            }
+        
+            // Call the function on page load
+            toggleBoxShadowOnScroll();
+        
+            // Call the function when the user scrolls
+            $(window).scroll(function() {
+              toggleBoxShadowOnScroll();
+            });
+          });
+        </script>
         
         <div class="place-list">
             <a href="#" class="a-link active-place">                
@@ -67,13 +93,15 @@
                 <i class="bi bi-arrow-down place-icon"></i>
                 <p class="place-text">Amazing Views</p>    
             </a>
-        </div>       
+        </div>  
+        
+             
        
         <button type="button" class="btn filter-btn"><i class="bi bi-filter list-space"></i>Filters</button>
       </div>
-      <!-- search list and filter button finished -->
+      <!-- SEARCH LIST AND FILTER BUTTON FINISHED -->
 
-      <!-- toggle input field -->
+      <!-- TOGGLE INPUT FIELD -->
       <div class="toggle-input-field">
         <!-- <input type="text" class="form-control" placeholder="Display total price | Includes all fees, before taxes" readonly> -->
         <p class="text-box">
@@ -88,8 +116,10 @@
           </div>
         
       </div>
+      <!-- TOGGLE INPUT FIELD FINISHED -->
 
-      <div class="container">
+      <!-- CAROUSEL -->
+      <div class="container"> 
         <div class="row">
           <div class="col-sm">
             <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
@@ -253,9 +283,11 @@
             </a>
           </div>
         </div>
-      </div>
+       </div> 
+      <!-- CAROUSEL FINISHED -->
     </div>
       
+    <!-- FOOTER -->
     <nav class="navbar fixed-bottom footer-styling">
       <div class="footer-left-elements">
         <p class="footer-space">&copy; 2023 Airbnb, Inc.</p>
@@ -281,6 +313,7 @@
         <i class="bi bi-arrow-up-short right-space "></i>
       </div>
     </nav>
+    <!-- FOOTER FINISHED -->
 
     <!-- ALTERNATIVE FOOTER -->
     <nav class="navbar fixed-bottom footer-styling alternative">
@@ -298,10 +331,11 @@
     </a>
       
     </nav>
+    <!-- ALTERNATIVE FOOTER FINISHED -->
 
     <!-- Link Bootstrap JS -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
 </body>
 </html>
 
