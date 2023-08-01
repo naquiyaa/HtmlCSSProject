@@ -28,6 +28,7 @@
 
       <!-- search list and filter button -->
       <div class="sticky search-and-filter"> 
+        
         <div class="place-list">
             <a href="#" class="a-link active-place">                
                     <i class="bi bi-rocket active-place-icon"></i>
@@ -43,36 +44,41 @@
             </a>
             <a href="#" class="a-link place-item">                
                 <i class="bi bi-rocket place-icon"></i>
-                <p class="place-text">Trending</p>            
+                <p class="place-text">Tropical</p>            
             </a>
             <a href="#" class="a-link place-item">                
                 <i class="bi bi-airplane place-icon"></i>
-                <p class="place-text">Trending</p>        
+                <p class="place-text">Rooms</p>        
             </a>
             <a href="#" class="a-link place-item">                
                 <i class="bi bi-activity place-icon"></i>
-                <p class="place-text">Trending</p>    
+                <p class="place-text">Beach</p>    
             </a>
             <a href="#" class="a-link place-item">                
                 <i class="bi bi-alarm place-icon"></i>
-                <p class="place-text">Trending</p>    
+                <p class="place-text">Desert</p>    
             </a>
             <a href="#" class="a-link place-item">                
                 <i class="bi bi-android place-icon"></i>
-                <p class="place-text">Trending</p>    
+                <p class="place-text">Mansion</p>    
             </a>
             <a href="#" class="a-link place-item">                
                 <i class="bi bi-arrow-down place-icon"></i>
-                <p class="place-text">Trending</p>    
+                <p class="place-text">Amazing Views</p>    
             </a>
         </div>       
+       
         <button type="button" class="btn filter-btn"><i class="bi bi-filter list-space"></i>Filters</button>
       </div>
       <!-- search list and filter button finished -->
 
       <!-- toggle input field -->
       <div class="toggle-input-field">
-        <input type="text" class="form-control" placeholder="Display total price | Includes all fees, before taxes" readonly>
+        <!-- <input type="text" class="form-control" placeholder="Display total price | Includes all fees, before taxes" readonly> -->
+        <p class="text-box">
+          <span class="display-price">Display total price</span>
+          <span class="separator">&nbsp;|&nbsp;</span> 
+          <span class="display-fees">Includes all fees, before taxes</span></p>
         <div class="container mt-4">
             <label class="switch">
               <input type="checkbox" id="toggleButton" data-toggle="toggle">
@@ -104,12 +110,8 @@
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev"  >
                 <span><i class="bi bi-arrow-left-circle nav-arrow"></i></span>
-                <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span> -->
               </button>
               <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
-                <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span> -->
                 <span><i class="bi bi-arrow-right-circle nav-arrow"></i></span>
               </button>
               
@@ -276,6 +278,23 @@
         <a class="footer-link" href="#">Support Resources</a>
         <i class="bi bi-arrow-up-short right-space "></i>
       </div>
+    </nav>
+
+    <!-- ALTERNATIVE FOOTER -->
+    <nav class="navbar fixed-bottom footer-styling alternative">
+      <a href="#" class="a-link footer-item">                
+        <i class="bi bi-search"></i>
+        <p class="footer-text">Explore</p>                
+    </a>
+    <a href="#" class="a-link footer-item">                
+      <i class="bi bi-heart"></i>
+        <p class="footer-text">Wishlists</p>                
+    </a>
+    <a href="#" class="a-link footer-item">                
+        <i class="bi bi-person-circle"></i>
+        <p class="footer-text">Log in</p>                
+    </a>
+      
     </nav>
 
     <!-- Link Bootstrap JS -->

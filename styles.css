@@ -26,7 +26,7 @@ p{
 }
 .btn.airbnb-home-btn {
   font-weight: 500;
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 
 .language-btn{
@@ -51,6 +51,7 @@ p{
   display: flex;
   color: gray;
   font-size: 0.9rem;
+  flex-wrap: wrap;
 }
 .footer-link{
   text-decoration: none;
@@ -76,6 +77,16 @@ p{
 }
 .right-space{
   margin-right: 2em;
+}
+.navbar.fixed-bottom.footer-styling.alternative {
+  display: none; 
+}
+.footer-item{
+  margin-right: 5em;
+}
+.footer-text{
+  color:gray;
+  font-size: small;
 }
 /* Footer End */
 
@@ -138,7 +149,7 @@ p{
 }
 .active-place-text{
     color:black;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 .active-place-icon{
     color:black;
@@ -160,7 +171,7 @@ p{
 }
 .place-text{
     color:gray;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 /* Toggle Button */
@@ -173,13 +184,24 @@ p{
 
   }
 
-  .form-control{
+  .text-box{
     height: 4em;
     border-radius: 0.75em !important;
+    border: 1px solid lightgray;
+    display: flex; /* Add this to use flexbox */
+    justify-content: flex-start; /* Align the text to the left */
+    align-items: center;
+    padding-left: 1em;
   }
-  .form-control:focus {
-    box-shadow: none !important;
-    border-color: #dee2e6 !important;
+  .display-price{
+    font-weight: 500;
+  }
+  .display-fees{
+    color:gray
+  }
+  .separator{
+    color: gray;
+    font-weight: 100;
   }
 
   /* Custom CSS for switch-like appearance */
@@ -192,7 +214,7 @@ p{
     top: 1em;
     bottom: 0;
     z-index: 2;
-    margin-right: 0.5em;
+    margin-right: 1em;
   }
   
   .switch input {
@@ -243,7 +265,7 @@ p{
   .place-desc{
     text-decoration: none;
     color: inherit;
-    font-size: 0.9em;
+    font-size: 0.9rem;
   }
 
   .title-rating{
@@ -305,6 +327,44 @@ p{
 
 }
 }
+
+@media (max-width: 1123px) {
+  .toggle-input-field {
+    left:2em;
+    margin-right: 4em;
+    max-width:100%;
+  }
+}
+
+@media (max-width: 743px) {
+  .text-box{
+    flex-direction: column;
+    align-items: start;
+    padding-top: 0.5em;
+  }
+  .separator{
+    display: none;
+  }
+  .navbar.fixed-bottom.footer-styling {
+    display: none; 
+  }
+  .navbar.fixed-bottom.footer-styling.alternative {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  } 
+}
+
+/* .footer-left-elements{
+  overflow-x: auto ;
+  flex-wrap: wrap;
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+
+}
+.footer-left-elements::-webkit-scrollbar {
+  display: none; 
+} */
 
 
   
