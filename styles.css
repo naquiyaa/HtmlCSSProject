@@ -1,56 +1,265 @@
 p{
     margin-bottom: 0 !important;
 }
+/* avoid the footer covering the content */
 .content{
-  min-height: calc(100vh - 54px); /* 100px is the height of the sticky footer */
-  padding-bottom: 5em;
+  min-height: calc(100vh - 54px); /* 54px is the height of the sticky footer */
+  padding-bottom: 4em;
 }
-/* Navbar */
+/* NAVBAR */
+.navbar-styling{
+  border-bottom: 1px solid lightgray;
+  background-color: white;
+}
 .logo{
-    object-fit:contain;
     height:2rem;
     margin-left:2em;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
-
-.navbar-styling{
-    border-bottom: 1px solid lightgray;
-    background-color: white;
-}
-
 .navbar-right-elements{
     display: flex;
     justify-content: space-between;
     margin-right: 2em;
 }
-
-.airbnb-home-btn{
-    border-radius: 3em !important;
-}
 .btn.airbnb-home-btn {
   font-weight: 500;
   font-size: 0.9rem;
+  border-radius: 3em !important;
 }
-
 .language-btn{
     border-radius: 5em !important;
     margin-right: 0.5em !important;
 }
-
 .btn:hover{
     background-color: whitesmoke !important;
 }
-
 .profile-btn{
     border: 1px solid lightgray !important;
     border-radius: 5em !important;
 }
 .profile-btn:hover{
     background-color: transparent !important;
+    /* box-shadow: 0, shadow below the button, blur radius, expanded 0.25em from original size, color  */
     box-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.2) !important;
 }
-/* Footer */
+.list-space{
+  margin-right: 0.5em;
+}
+/* NAVBAR FINISHED */
+
+/* SEARCH PLACES LIST AND FILTER */
+.search-and-filter{
+    display: flex;
+    justify-content: space-between; 
+    background-color: white;
+    align-items: center;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-bottom: 2em;
+    position: sticky;
+    top: 6em;
+    z-index: 99;
+    /* z-index is used to give priority to elements when stacking/overlaying them */
+}
+.place-list{
+  margin-top: 1em;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  max-width: 90%;
+  -ms-overflow-style: none; /*hide scrollbar in edge and ie */
+  scrollbar-width: none; /*hide scrollbar in firefox */
+}
+.place-list::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome, Safari, and Opera */
+}
+.a-link{
+  text-decoration: none;
+  color: inherit; /*inherit takes up the color of the parent */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 1em;
+}
+.active-place{
+  border-bottom: 2px solid black;
+  margin-right: 5em;
+}
+.active-place-icon{
+  color:black;
+}
+.active-place-text{
+  color:black;
+  font-size: 0.9rem;
+}
+.place-item{
+  margin-right: 5em;
+}
+.place-item:hover{
+  border-bottom:2px solid lightgray;
+  .place-icon{
+      color:black;
+  }
+  .place-text{
+      color:black;
+  } 
+}
+.place-icon{
+  color:gray;
+}
+.place-text{
+  color:gray;
+  font-size: 0.9rem;
+}
+.btn.filter-btn {
+  display: flex;
+  align-items: center;
+  border-radius: 0.5em !important;
+  border: 1px solid lightgray !important;
+  height: 3em !important;
+}
+.filter-btn:hover{
+  background-color: transparent !important; 
+}
+.search-and-filter.scrolled {
+  box-shadow: 0 0.15em 0.07em whitesmoke;
+  top: 4.75em;
+}
+ 
+/* SEARCH PLACES LIST AND FILTER FINISHED */
+
+/* TOGGLE BUTTON */
+  .toggle-input-field {
+    left: 25%;
+    /* margin-right:2em; */
+    /* align-items: center; */
+    position: relative;
+    max-width:45%;
+  }
+  .text-box{
+    height: 4em;
+    border-radius: 0.75em !important;
+    border: 1px solid lightgray;
+    display: flex;  
+    justify-content: flex-start; /* Align the text to the left */
+    align-items: center;
+    padding-left: 1em;
+  }
+  .display-price{
+    font-weight: 500;
+  }
+  .display-fees{
+    color:gray
+  }
+  .separator{
+    color: gray;
+    font-weight: 100;
+  }
+  /* Custom CSS for switch-like appearance */
+.switch {
+    position: absolute;
+    display: inline-block;
+    width: 3.25em;
+    height: 2em;
+    right: 0;
+    top: 1em;
+    bottom: 0;
+    z-index: 2;
+    margin-right: 1em;
+  }  
+  .switch input {
+    display: none;
+  }  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #B0B0B0;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 4em;
+  }  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.75em;
+    width: 1.75em;
+    left: 0.05em;
+    bottom: 0.15em;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }  
+  input:checked + .slider {
+    background-color: black;
+  }  
+  input:focus + .slider {
+    box-shadow: 0 0 1px black;
+  }  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(1.25em);
+    -ms-transform: translateX(1.25em);
+    transform: translateX(1.25em);
+  }
+  /* TOGGLE BUTTON FINISHED */
+  /* CAROUSEL TEXT STYLING */
+  .place-desc{
+    text-decoration: none;
+    color: inherit;
+    font-size: 0.9rem;
+  }
+  .title-rating{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5em;
+  }
+  .rating{
+    display: flex;
+    justify-content: space-between;
+  }
+  .desc-text{
+    color:gray !important;
+  }
+  .taxes{
+    text-decoration: underline;
+    font-weight: 400;
+  }
+/*CAROUSEL IMAGE STYLING  */
+.container{
+  max-width:96vw !important;
+}
+.carousel .carousel-control-prev, .carousel .carousel-control-next{
+    visibility: hidden;
+}
+.carousel:hover .carousel-control-prev, .carousel:hover .carousel-control-next{
+    visibility: visible;
+}
+.carousel-indicators{
+  margin-bottom: 0 !important;
+}
+  .carousel-indicators li {
+    height: 10px !important;
+    width: 10px !important;
+    border-radius: 100%;
+  }
+  li::marker{font-size:0;}  
+  
+  .carousel-item img {     
+    border-radius: 1em;
+    width: 30vw;
+    height:35vh;
+  }
+  .nav-arrow{
+    font-size: 1.5rem;
+  }
+  /* CAROUSEL STYLING FINISHED */
+  /* FOOTER */
 .footer-left-elements{
   display: flex;
   color: gray;
@@ -86,255 +295,17 @@ p{
   display: none; 
 }
 .footer-item{
-  margin-right: 5em;
+  margin-right: 2em;
+  margin-left: 2em;
 }
 .footer-text{
   color:gray;
   font-size: small;
 }
-/* Footer End */
+/* FOOTER END */
 
-/* Search Places List and Filter */
-.list-space{
-    margin-right: 0.5em;
-}
-.search-and-filter{
-    display: flex;
-    justify-content: space-between; 
-    background-color: white;
-    align-items: center;
-    padding-left: 2em;
-    padding-right: 2em;
-    margin-bottom: 2em;
-    /* padding-top: 0.5em; */
-    position: sticky;
-    top: 4.75em;
-    z-index: 99;
-    /* -webkit-box-shadow:0px 1px 1px lightgray;
-    -moz-box-shadow:0px 1px 1px lightgray;
-    box-shadow:0px 1px 2px lightgray; */
-    /* z-index is used to give priority to elements when stacking/overlaying them */
-}
 
-.search-and-filter.scrolled {
-  box-shadow: 0px 1px 2px lightgray;
-}
-
-.place-list{
-    margin-top: 1em;
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    max-width: 90%;
-    -ms-overflow-style: none; /*hide scrollbar in edge and ie */
-    scrollbar-width: none; /*hide scrollbar in firefox */
-
-}
-.place-list::-webkit-scrollbar {
-    display: none; /* Hide scrollbar in Chrome, Safari, and Opera */
-}
-.filter-btn{
-    margin-top: 1em;
-    border-radius: 0.5em !important;
-    border: 1px solid lightgray !important;
-    height: 3em !important;
-} 
- .filter-btn:hover{
-    background-color: transparent !important; 
-}
-.btn.filter-btn {
-  display: flex;
-  align-items: center;
-}
-.a-link{
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-.active-place{
-    border-bottom: 2px solid black;
-    margin-right: 5em;
-}
-.active-place-text{
-    color:black;
-    font-size: 0.9rem;
-}
-.active-place-icon{
-    color:black;
-}
-.place-item{
-    margin-right: 5em;
-}
-.place-item:hover{
-    border-bottom:2px solid lightgray;
-    .place-icon{
-        color:black;
-    }
-    .place-text{
-        color:black;
-    } 
-}
-.place-icon{
-    color:gray;
-}
-.place-text{
-    color:gray;
-    font-size: 0.9rem;
-}
-
-/* Toggle Button */
-  .toggle-input-field {
-    left: 25%;
-    margin-right:2em;
-    align-items: center;
-    position: relative;
-    max-width:45%;
-
-  }
-
-  .text-box{
-    height: 4em;
-    border-radius: 0.75em !important;
-    border: 1px solid lightgray;
-    display: flex; /* Add this to use flexbox */
-    justify-content: flex-start; /* Align the text to the left */
-    align-items: center;
-    padding-left: 1em;
-  }
-  .display-price{
-    font-weight: 500;
-  }
-  .display-fees{
-    color:gray
-  }
-  .separator{
-    color: gray;
-    font-weight: 100;
-  }
-
-  /* Custom CSS for switch-like appearance */
-.switch {
-    position: absolute;
-    display: inline-block;
-    width: 3.25em;
-    height: 2em;
-    right: 0;
-    top: 1em;
-    bottom: 0;
-    z-index: 2;
-    margin-right: 1em;
-  }
-  
-  .switch input {
-    display: none;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 4em;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 1.75em;
-    width: 1.75em;
-    left: 0.05em;
-    bottom: 0.15em;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 50%;
-  }
-  
-  input:checked + .slider {
-    background-color: black;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px black;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(1.25em);
-    -ms-transform: translateX(1.25em);
-    transform: translateX(1.25em);
-  }
-
-  /* Carousel Text Styling */
-  .place-desc{
-    text-decoration: none;
-    color: inherit;
-    font-size: 0.9rem;
-  }
-
-  .title-rating{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0.5em;
-  }
-  .rating{
-    display: flex;
-    justify-content: space-between;
-  }
-  .desc-text{
-    color:gray !important;
-  }
-  .taxes{
-    text-decoration: underline;
-    font-weight: 400;
-  }
-/*Carousel Image Styling  */
-
-.container{
-  max-width:96vw !important;
-}
-
-.carousel .carousel-control-prev, .carousel .carousel-control-next{
-    visibility: hidden;
-}
-
-.carousel:hover .carousel-control-prev, .carousel:hover .carousel-control-next{
-    visibility: visible;
-}
-
-.carousel-indicators{
-  margin-bottom: 0 !important;
-}
-
-  .carousel-indicators li {
-    height: 10px !important;
-    width: 10px !important;
-    border-radius: 100%;
-  }
-
-  li::marker{font-size:0;}
-  
-  .carousel-item img {     
-    /*width:15em;
-    object-fit: cover;  */
-    border-radius: 1em;
-    width: 250px;
-    height:250px;
-  }
-  
-
-  .nav-arrow{
-    font-size: 1.5rem;
-  }
-
-  /* Media Queries */
+  /* MEDIA QUERIES */
   /* Hide the button when the screen width is less than or equal to 768px */
 @media (max-width: 745px) {
   .btn.filter-btn {
@@ -342,10 +313,8 @@ p{
   }
   .place-list{
     max-width: 100%; 
-
 }
 }
-
 @media (max-width: 1123px) {
   .toggle-input-field {
     left:2em;
@@ -353,7 +322,6 @@ p{
     max-width:100%;
   }
 }
-
 @media (max-width: 743px) {
   .text-box{
     flex-direction: column;
@@ -372,6 +340,8 @@ p{
     align-items: center;
   } 
 }
+
+
 
 
 
