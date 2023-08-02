@@ -332,6 +332,7 @@ p{
 .footer-item{
   margin-right: 2em;
   margin-left: 2em;
+  margin-bottom: -1em;
 }
 .footer-text{
   color:gray;
