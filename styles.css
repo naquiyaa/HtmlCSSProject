@@ -47,6 +47,41 @@ p{
   margin-right: 0.5em;
 }
 /* NAVBAR FINISHED */
+/* ALTERNATIVE NAVBAR */
+.line1{
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.line2{
+  color:gray;
+  font-size: small;
+}
+.navbar.sticky-top.navbar-styling.alternative {
+  display: none;
+}
+.alt-navbar-search-text{
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.4em;
+}
+.alt-navbar-link{
+  text-decoration: none;
+  color: inherit; /*inherit takes up the color of the parent */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  /* padding-bottom: 1em; */
+}
+.btn.nav-filter-btn{
+  border: 1px solid lightgray !important;
+  border-radius: 7em;
+
+}
+.btn.nav-filter-btn{
+  background-color: transparent !important;
+}
+/* ALTERNATIVE NAVBAR FINISHED */
 
 /* SEARCH PLACES LIST AND FILTER */
 .search-and-filter{
@@ -249,7 +284,7 @@ p{
     border-radius: 100%;
   }
   li::marker{font-size:0;}  
-  
+
   .carousel-item img {     
     border-radius: 1em;
     width: 30vw;
@@ -304,9 +339,8 @@ p{
 }
 /* FOOTER END */
 
-
-  /* MEDIA QUERIES */
-  /* Hide the button when the screen width is less than or equal to 768px */
+/* MEDIA QUERIES */
+/* Hide the button when the screen width is less than or equal to 768px */
 @media (max-width: 745px) {
   .btn.filter-btn {
     display: none;
@@ -338,7 +372,16 @@ p{
     display: flex; 
     justify-content: center;
     align-items: center;
-  } 
+  }
+  .navbar.sticky-top.navbar-styling{
+    display: none;
+  }
+  .navbar.sticky-top.navbar-styling.alternative {
+    padding-left: 2em;
+    padding-right: 2em;
+    display: flex;
+    /* align-items: center; */
+  }
 }
 
 
