@@ -302,35 +302,31 @@ p{
   .ticker-container {
     position: fixed;
     bottom:38px;
-    /* top: 0; */
     left:0;
-    background-color: #333;
-    color: #fff;
+    background-color: #fad8d9;
+    color: black;
     padding: 0.25em 0;
-    width:100%;
+    width: 100%;
     overflow: hidden;
     z-index: 1; /* Adjust this value as needed */
   }
   
   .ticker-content {
-    display: inline-block;
+    /* preventing text from moving to next line */
+    /* infinite is to tell the content will go from right to left continuously */
     white-space: nowrap;
-    animation: marquee 10s linear infinite;
-    /* width: max-content; */
+    animation: banner-slider 20s linear infinite;
   }
-  /* .ticker-content p {
-    margin: 0;
-    padding: 5px 20px;
-  } */
   
-  @keyframes marquee {
+  /* @keyframes is used for animation */
+  /* transform property is used to translate the content horizontally  */
+  @keyframes banner-slider {
     0% {
       transform: translateX(100%);
     }
-    100% {
-      transform: translateX(-100%);
-    }
   }
+  
+  
 
   /* FOOTER */
 .footer-left-elements{
